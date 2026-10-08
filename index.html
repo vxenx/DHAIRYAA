@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Turuu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Mono:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cursorGlow"></div>
+  <div id="stars"></div>
+  <div id="toast"></div>
+
+  <section id="welcome" class="screen">
+    <div class="welcome-inner">
+      <div class="tiny">a little corner of the internet</div>
+      <div class="envelope" id="envelope" aria-label="Open">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body"></div>
+        <div class="heart-seal">♡</div>
+      </div>
+      <h1>hey, turuu.</h1>
+      <p>you have a little something waiting for you.</p>
+      <button id="openBtn">open it <span>↗</span></button>
+    </div>
+  </section>
+
+  <main id="world" class="hidden">
+    <header class="topbar">
+      <span>FOR TURUU, WITH LOVE</span>
+      <button id="soundBtn">♪ <span>sound</span></button>
+    </header>
+
+    <section class="room">
+      <div class="moon"></div>
+      <div class="window">
+        <div class="sky-stars"></div>
+        <div class="curtain left"></div>
+        <div class="curtain right"></div>
+        <div class="window-sill"></div>
+      </div>
+
+      <div class="lamp">
+        <div class="lamp-shade"></div>
+        <div class="lamp-light"></div>
+        <div class="lamp-stand"></div>
+      </div>
+
+      <div class="desk">
+        <div class="desk-top"></div>
+        <div class="desk-front"></div>
+
+        <button class="object photo-object" data-modal="photos">
+          <div class="polaroid-stack">
+            <img src="assets/us1.jpg" alt="">
+            <span>memories</span>
+          </div>
+        </button>
+
+        <button class="object letter-object" data-modal="letter">
+          <div class="letter-icon">♡</div>
+          <small>for you</small>
+        </button>
+
+        <button class="object music-object" data-modal="music">
+          <div class="record"><span>♪</span></div>
+          <small>our little song</small>
+        </button>
+
+        <button class="object star-object" data-modal="stars-modal">
+          <div class="jar">
+            <i>✦</i><i>✧</i><i>✦</i><i>✧</i>
+          </div>
+          <small>things i adore</small>
+        </button>
+
+        <button class="object gift-object" id="giftBtn">
+          <div class="gift"><span></span></div>
+          <small>open last ♡</small>
+        </button>
+      </div>
+
+      <div class="room-note">
+        <span>08 / 10</span>
+        <p>take your time.<br>there's no rush.</p>
+      </div>
+
+      <div class="room-title">
+        <span>WELCOME TO</span>
+        <h2>our little<br><em>world.</em></h2>
+      </div>
+    </section>
+
+    <section class="memory-strip">
+      <div>
+        <span class="tiny">little things</span>
+        <h2>because it's<br><em>you.</em></h2>
+      </div>
+      <div class="memory-quote">
+        <p>“You somehow make ordinary moments feel like something worth keeping.”</p>
+        <span>♡</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <button class="close">×</button>
+
+    <div class="modal-panel" id="letterModal">
+      <span class="tiny">a letter for you</span>
+      <h2>Dear Turuu,</h2>
+      <div class="letter-text">
+        <p>Happy birthday, you. ♡</p>
+        <p>I wanted to make you something that wasn't just a birthday message, but a tiny place you could come back to.</p>
+        <p>Thank you for all the little moments, the random conversations, the laughs, and everything that somehow became special simply because it was with you.</p>
+        <p>I hope this year is kind to you. I hope you get everything you quietly wish for, and then a little more.</p>
+        <p>And most importantly, I hope you know how deeply loved and appreciated you are.</p>
+        <p class="signature">Happy birthday, Turuu.<br>♡</p>
+      </div>
+    </div>
+
+    <div class="modal-panel hidden-panel" id="photosModal">
+      <span class="tiny">little pieces of us</span>
+      <h2>memories ♡</h2>
+      <div class="photo-grid">
+        <img src="assets/us1.jpg" alt=""><img src="assets/us2.jpg" alt="">
+        <img src="assets/us3.jpg" alt=""><img src="assets/us4.jpg" alt="">
+        <img src="assets/us5.jpg" alt=""><img src="assets/us6.jpg" alt="">
+        <img src="assets/us7.jpg" alt=""><img src="assets/us8.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="modal-panel hidden-panel" id="musicModal">
+      <span class="tiny">press play</span>
+      <h2>our little song ♡</h2>
+      <div class="music-card">
+        <div class="vinyl"></div>
+        <div>
+          <strong>something that reminds me of you</strong>
+          <p>Replace this with your song in <code>script.js</code>.</p>
+          <button id="playFake">▶ play</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-panel hidden-panel" id="stars-modalModal">
+      <span class="tiny">things i may never say enough</span>
+      <h2>little reasons. ♡</h2>
+      <div class="reasons">
+        <span>your smile</span><span>your voice</span><span>your stupid jokes</span>
+        <span>the way you care</span><span>our random conversations</span>
+        <span>the tiny things you do</span><span>your presence</span><span>you.</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="finale" class="finale hidden">
+    <div class="countdown" id="countdown">3</div>
+    <div class="finale-content">
+      <div class="burst">✦</div>
+      <p class="tiny">the last little surprise</p>
+      <h2>Happy Birthday,<br><em>Turuu.</em></h2>
+      <div class="final-photo">
+        <img src="assets/us8.jpg" alt="">
+      </div>
+      <p class="final-message">May this year give you a thousand reasons to smile.<br>And may you always remember how loved you are. ♡</p>
+      <div class="final-heart">♡</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
